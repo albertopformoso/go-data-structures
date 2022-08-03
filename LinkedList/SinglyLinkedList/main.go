@@ -9,13 +9,13 @@ import (
 // Node represents a node of a linked list
 type Node struct {
 	next *Node
-	key interface{}
+	key  interface{}
 }
 
 // LinkedList represents a linked list
 type LinkedList struct {
 	head *Node
-	len int
+	len  int
 }
 
 // Insert adds an element to the end of the list

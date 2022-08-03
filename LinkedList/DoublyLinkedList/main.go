@@ -6,7 +6,6 @@ import (
 	"log"
 )
 
-
 type Node struct {
 	prev *Node
 	next *Node
@@ -16,7 +15,7 @@ type Node struct {
 type LinkedList struct {
 	head *Node
 	tail *Node
-	len int
+	len  int
 }
 
 func (ll *LinkedList) Insert(key interface{}) {
@@ -83,7 +82,7 @@ func (ll *LinkedList) InsertAt(index int, key interface{}) {
 	n := ll.GetAt(index)
 	newNode.next = n
 	n.prev = &newNode
-	prevNode := ll.GetAt(index-1)
+	prevNode := ll.GetAt(index - 1)
 	prevNode.next = &newNode
 	newNode.prev = prevNode
 	ll.len++
@@ -111,7 +110,7 @@ func (ll *LinkedList) DeleteAt(index int) error {
 		return errors.New("index cannot be negative")
 	}
 
-	if index > ll.len - 1 {
+	if index > ll.len-1 {
 		log.Printf("index out of range")
 		return errors.New("index out of range")
 	}
