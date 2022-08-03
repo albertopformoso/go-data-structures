@@ -20,7 +20,7 @@ type bucket struct {
 
 //bucketNode structure
 type bucketNode struct {
-	key string
+	key  string
 	next *bucketNode
 }
 
@@ -64,6 +64,7 @@ func (b *bucket) search(k string) bool {
 	}
 	return false
 }
+
 // delete will take in a key and delete the node from the bucket
 func (b *bucket) delete(k string) {
 
