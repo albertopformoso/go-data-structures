@@ -45,17 +45,18 @@ func (h *MinHeap) minHeapifyUp(index int) {
 func (h *MinHeap) minHeapifyDown(index int) {
 	for {
 		l, r := left(index), right(index)
+		childToCompare := l
 		if l >= len(h.arr) || l < 0 { // < 0 int overflow
 			break
 		}
 
 		if r < len(h.arr) && h.arr[l] >= h.arr[r] {
-			l = r
+			childToCompare = r
 		}
-		if h.arr[l] >= h.arr[index] {
+		if h.arr[childToCompare] >= h.arr[index] {
 			break
 		}
-		h.swap(index, l)
+		h.swap(index, childToCompare)
 		index = l
 	}
 }
