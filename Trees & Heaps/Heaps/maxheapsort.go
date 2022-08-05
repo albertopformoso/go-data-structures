@@ -91,7 +91,8 @@ func (h *MaxHeap) swap(i1, i2 int) {
 func main() {
 	m := &MaxHeap{}
 	log.Println(m)
-	buildHeap := []int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
+	// buildHeap := []int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
+	buildHeap := []int{4, 7, 8, 2, 9, 3, 1, 6, 10}
 	for _, v := range buildHeap {
 		m.Insert(v)
 	}
