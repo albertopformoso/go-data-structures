@@ -51,9 +51,9 @@ func (h *MaxHeap) maxHeapifyDown(index int) {
 	for l <= lastIndex {
 		if l == lastIndex { // when left child is the only child
 			childToCompare = l
-		} else if h.arr[l] > h.arr[r] { // when left child is larger
+		} else if h.arr[l] > h.arr[r] { // when left child is greater
 			childToCompare = l
-		} else { // when right child is larger
+		} else { // when right child is greater
 			childToCompare = r
 		}
 

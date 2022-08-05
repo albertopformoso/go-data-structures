@@ -50,7 +50,7 @@ func (h *MinHeap) minHeapifyDown(index int) {
 			break
 		}
 
-		if r < len(h.arr) && h.arr[l] >= h.arr[r] {
+		if r < len(h.arr) && h.arr[l] >= h.arr[r] { // when left child is greater
 			childToCompare = r
 		}
 		if h.arr[childToCompare] >= h.arr[index] {
